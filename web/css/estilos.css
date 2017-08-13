@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #343434;
+    background-color: #E8F3F8;
+    height: 100%;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+#header, #footer {
+    background: #81A8B8 url("../image/bg.png") repeat-x;
+    margin: 0;
+}
+
+#header {
+    border-bottom: #343434 3px solid;
+    background-position-y: -175px;
+    padding: 30px 100px 5px;
+    height: 2em;
+    color: white;
+}
+
+#footer {
+    border-top: #343434 3px solid;
+    background-position-y: 25px;
+    text-align: right;
+    color: #343434;
+    padding: 5px 100px 45px;
+    height: 2em;
+    left: 0;
+    right: 0;
+}
+
+#content-wrapper {
+    background-color: #E8F3F8;
+    margin-bottom: 0;
+    padding: 0 3em;
+}
+
+#content {
+    background-color: white;
+    margin: 0 0.8em;
+    padding: 0.5em 1.3em 1em;
+}
+
+#app-version {
+    font-size: 0.7em;
+}
+
+#copyrigth {
+    font-size: 0.9em;
+}
+
+#header h1 {
+    margin: 0;
+}
+
+#content h2 {
+    border-bottom: 3px solid #81A8B8;
+    padding: 0.3em 1em;
+}
+
+.tabla-archivos {
+    background-color: #C2CBCE;
+    width: 95%;
+    margin: 0.5em 1em;
+}
+
+.tabla-archivos th {
+    background-color: #81A8B8;
+    text-align: left;
+    color: white;
+    padding: 0.1em 1em;
+}
+
+.tabla-archivos td {
+    padding: 0.2em 1em;
+    font-family: "Courier New", monospace;
+    font-size: 0.8em;
+}
+
+.tabla-archivos .fila-impar {
+    background-color: #E8F3F8;
+}
+
+.tabla-archivos .fila-par {
+    background-color: #DBE6EC;
+}
+
+.tabla-archivos a, .tabla-archivos a:hover, .tabla-archivos a:visited {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.mensaje-error {
+    color: red;
+}
+
+.numero-linea {
+    text-align: right;
+    font-size: small;
+    font-weight: bold;
+}
+
+.file-separator {
+    color: #c97c00;
+    font-size: 1.2em;
+}
+
+.directorio {
+
+}
+
+.comentario-properties {
+    color: lightcoral;
+}
+
+.key-properties {
+    color: darkgreen;
+}
+
+.value-properties {
+    color: crimson;
+}
+
+.equal-properties {
+    color: #c97c00;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-weight: bold;
+}
+
+#menu {
+    margin: 0;
+    padding: 0 4em;
+    background-color: #DBE6EC;
+}
+
+#menu a {
+    display: inline-block;
+    background-color: #DBE6EC;
+    width: 200px;
+    text-align: center;
+    border: solid 2px #81A8B8;
+    margin: 0;
+    padding: 0.2em 0;
+    height: auto;
+}
+
+#menu a:hover, #menu a:visited, #menu a {
+    font-size: small;
+    font-weight: bold;
+    text-decoration: none;
+    color: #343434;
+}
