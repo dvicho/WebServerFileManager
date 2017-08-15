@@ -26,5 +26,9 @@
             <result name="success">/html/form_subida.jsp</result>
             <result name="error">/html/error.jsp</result>
         </action>
+        <action name="subirArchivo" class="com.devicho.portal.serverfilemanager.actions.SubirArchivoAction">
+            <result name="success">/html/form_subida.jsp</result>
+            <result name="error">/html/error.jsp</result>
+        </action>
     </package>
 </struts>

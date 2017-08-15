@@ -58,7 +58,7 @@
     </div>
 </div>
 <div id="footer">
-    <span id="copyrigth">© 2016</span> <span id="app-version">Versión 1.1</span>
+    <span id="copyrigth">© 2017</span> <span id="app-version">Versión 1.1</span>
 </div>
 </body>
 </html>

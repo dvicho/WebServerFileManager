@@ -25,11 +25,11 @@
     <div id="content-wrapper">
         <div id="content">
             <h2>Subida de archivos</h2>
-            <s:form action="subirArchivoForm" method="post" enctype="multipart/form-data">
+            <s:form action="subirArchivo" method="post" enctype="multipart/form-data">
                 <s:file label="Archivo" name="archivo" size="100"/>
                 <s:textfield label="Guardar como" name="nombreArchivoGuardarComo"/>
-                <s:radio label="Carpeta destino" name="destino" list="#{'1': 'config', '2': 'log'}" />
-                <s:submit value="Subir achivo" />
+                <s:radio label="Carpeta destino" name="destino" list="#{'1': 'config', '2': 'log'}" value="1"/>
+                <s:submit value="Subir archivo" />
             </s:form>
         </div>
     </div>
