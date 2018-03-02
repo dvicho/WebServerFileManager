@@ -15,7 +15,7 @@ public class MostrarArchivoAction implements Action {
     private List<String> lineas;
     private String mensajeError;
     private long lineasTotales = 0;
-    private int numeroLineas = 100;
+    private int numeroLineas = 1000;
     private int tipoArchivo;
 
     @Override
@@ -23,11 +23,13 @@ public class MostrarArchivoAction implements Action {
         String actionResult;
         File file = new File(nombreArchivo);
         BufferedReader br = null;
+        FileReader reader = null;
 
         try {
-            br = new BufferedReader(new FileReader(file));
+            reader = new FileReader(file);
+            br = new BufferedReader(reader);
             String linea;
-            lineas = new ArrayList<>();
+            lineas = new ArrayList<String>();
 
             if (file.getName().toLowerCase().endsWith(".properties")) {
                 tipoArchivo = 1;
@@ -58,6 +60,14 @@ public class MostrarArchivoAction implements Action {
             mensajeError = "Ocurrió un error de null pointer exception.";
             actionResult = Action.ERROR;
         } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            
             if (br != null) {
                 try {
                     br.close();

@@ -14,6 +14,7 @@ public class BusquedasFacade {
     public List<String> listarArchivos(int tipo, boolean verEnSubdirectorios) {
         List<String> archivos = null;
         String pathBase = System.getProperty("jboss.server.base.dir");
+//        String pathBase = System.getProperty("oracle.j2ee.home");
 
         switch (tipo) {
             case 1:
@@ -30,7 +31,7 @@ public class BusquedasFacade {
     }
 
     private List<String> ls(final File folder, boolean verEnSubdirectorios) {
-        List<String> lista = new ArrayList<>();
+        List<String> lista = new ArrayList<String>();
 
         if (folder != null && folder.listFiles() != null) {
             for (final File fileEntry : folder.listFiles()) {

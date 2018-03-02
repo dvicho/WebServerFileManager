@@ -7,7 +7,7 @@
 <struts>
     <package name="basico" extends="struts-default">
         <global-results>
-            <result name="errorPage">html/error.jsp</result>
+            <result name="errorPage">/html/error.jsp</result>
         </global-results>
         <action name="index" class="com.devicho.portal.serverfilemanager.actions.BusquedaAction">
             <param name="tipo">1</param>

@@ -11,6 +11,7 @@ public class SubirArchivoFacade {
 
     public boolean subirArchivos(File archivo, String nombreArchivo, String carpetaDestino) {
         String pathBase = System.getProperty("jboss.server.base.dir");
+//        String pathBase = System.getProperty("oracle.j2ee.home");
         String fullName = pathBase + separador + carpetaDestino + separador + nombreArchivo;
 
         boolean exito = false;
