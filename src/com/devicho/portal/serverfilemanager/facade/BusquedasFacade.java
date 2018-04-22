@@ -2,6 +2,8 @@ package com.devicho.portal.serverfilemanager.facade;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -42,6 +44,9 @@ public class BusquedasFacade {
                 }
             }
         }
+
+        Collections.sort(lista);
+
         return lista;
     }
 }
