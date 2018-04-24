@@ -31,10 +31,20 @@
                 <s:radio label="Carpeta destino" name="destino" list="#{'1': 'config', '2': 'log'}" value="1"/>
                 <s:submit value="Subir archivo" />
             </s:form>
+            <s:if test="hasActionErrors()">
+                <div class="div-errors">
+                    <s:actionerror/>
+                </div>
+            </s:if>
+            <s:if test="hasActionMessages()">
+                <div class="div-exito">
+                    <s:actionmessage/>
+                </div>
+            </s:if>
         </div>
     </div>
     <div id="footer">
-        <span id="copyrigth">© 2016</span> <span id="app-version">Versión 1.1</span>
+        <span id="copyrigth">© 2018</span> <span id="app-version">Versión 1.2</span>
     </div>
 </body>
 </html>

@@ -9,9 +9,9 @@ public class SubirArchivoFacade {
 
     private final String separador = System.getProperty("file.separator");
 
-    public boolean subirArchivos(File archivo, String nombreArchivo, String carpetaDestino) {
+    public boolean subirArchivos(File archivo, String nombreArchivo, String carpetaDestino) throws FileNotFoundException {
         String pathBase = System.getProperty("jboss.server.base.dir");
-//        String pathBase = System.getProperty("oracle.j2ee.home");
+        
         String fullName = pathBase + separador + carpetaDestino + separador + nombreArchivo;
 
         boolean exito = false;
@@ -32,8 +32,6 @@ public class SubirArchivoFacade {
 
             exito = true;
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

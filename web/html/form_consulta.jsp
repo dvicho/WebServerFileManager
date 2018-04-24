@@ -25,7 +25,7 @@
 <div id="content-wrapper">
     <div id="content">
         <h2>Consulta</h2>
-        <s:form action="buscar" method="post">
+        <s:form action="buscar" method="POST">
             <s:radio label="Carpeta" name="tipo" list="#{'1': 'config', '2': 'log'}" />
             <s:checkbox label="Incluir subdirectorios" name="verEnSubdirectorios"/>
             <s:submit value="Buscar" />
@@ -34,8 +34,8 @@
             <p>No se encontraron archivos para mostrar.</p>
         </s:if>
         <s:else>
-            <s:form action="subirArchivoForm" >
-                <s:submit value="Sustituir Archivo"/>
+            <s:form action="borrar" method="POST">
+                <s:submit value="Borrar Archivo"/>
             <table class="tabla-archivos">
                 <tr>
                     <th>&nbsp;</th>
@@ -51,20 +51,20 @@
                 <s:else>
                 <tr class="fila-par">
                 </s:else>
-                    <td><input type="radio" name="nombreArchivoGuardarComo" value="${archivo}"/></td>
+                    <td><input type="checkbox" name="listaArchivos" value="${archivo}"/></td>
                     <td><s:a href="%{mostrarArchivo}"><dev:value value="${archivo}"
                                                                 cssClassDiretorio="directorio"
                                                                 cssClassSeparador="file-separator"/></s:a></td>
                 </tr>
             </s:iterator>
             </table>
-                <s:submit value="Sustituir Archivo"/>
+                <s:submit value="Borrar Archivo"/>
             </s:form>
         </s:else>
     </div>
 </div>
 <div id="footer">
-    <span id="copyrigth">© 2016</span> <span id="app-version">Versión 1.1</span>
+    <span id="copyrigth">© 2018</span> <span id="app-version">Versión 1.2</span>
 </div>
 </body>
 </html>

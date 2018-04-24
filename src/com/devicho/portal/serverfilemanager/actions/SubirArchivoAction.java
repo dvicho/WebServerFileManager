@@ -27,8 +27,19 @@ public class SubirArchivoAction extends ActionSupport {
         String dest = destino == 2 ? DEST_LOG : DEST_CONFIG;
 
         SubirArchivoFacade facade = new SubirArchivoFacade();
-
-        boolean exito = facade.subirArchivos(archivo, nombreArchivoGuardarComo, dest);
+    
+        boolean exito = false;
+        try {
+            exito = facade.subirArchivos(archivo, nombreArchivoGuardarComo, dest);
+        } catch (FileNotFoundException e) {
+            addActionError("Problema durante la carga del archivo. " + e.getMessage());
+        }
+    
+        if (exito) {
+            addActionMessage("Archivo cargado correctamente");
+        } else {
+            addActionError("Problema al subir archivo");
+        }
 
         return exito ? Action.SUCCESS : Action.ERROR;
     }
@@ -71,5 +82,14 @@ public class SubirArchivoAction extends ActionSupport {
 
     public void setDestino(int destino) {
         this.destino = destino;
+    }
+    
+    @Override
+    public void validate() {
+        if (this.archivo == null) {
+            addFieldError("archivo", "No hay un archivo que subir.");
+        } else if (this.nombreArchivo == null) {
+            this.nombreArchivo = this.archivo.getName();
+        }
     }
 }

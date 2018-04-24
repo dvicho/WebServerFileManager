@@ -27,13 +27,18 @@
         <p>
             Ocurrió un error. <span class="mensaje-error"><s:property value="mensajeError"/></span></p>
         </p>
+        <s:if test="hasActionErrors()">
+            <div class="div-errors">
+                <s:actionerror/>
+            </div>
+        </s:if>
         <p>
             <s:a href="index.action">Regresar</s:a>
         </p>
     </div>
 </div>
 <div id="footer">
-    <span id="copyrigth">© 2016</span> <span id="app-version">Versión 1.1</span>
+    <span id="copyrigth">© 2018</span> <span id="app-version">Versión 1.2</span>
 </div>
 </body>
 </html>

@@ -158,3 +158,16 @@ html {
     text-decoration: none;
     color: #343434;
 }
+
+.div-exito {
+    background-color:#DDFFDD;
+    border:1px solid #009900;
+    width:200px;
+}
+
+.div-errors {
+    background-color:#FFCCCC;
+    border:1px solid #CC0000;
+    width:400px;
+    margin-bottom:8px;
+}

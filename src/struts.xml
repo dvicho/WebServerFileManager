@@ -7,28 +7,27 @@
 <struts>
     <package name="basico" extends="struts-default">
         <global-results>
-            <result name="errorPage">/html/error.jsp</result>
+            <result name="error">/html/error.jsp</result>
         </global-results>
         <action name="index" class="com.devicho.portal.serverfilemanager.actions.BusquedaAction">
             <param name="tipo">1</param>
             <result name="success">/html/form_consulta.jsp</result>
-            <result name="error">/html/error.jsp</result>
         </action>
         <action name="buscar" class="com.devicho.portal.serverfilemanager.actions.BusquedaAction">
             <result name="success">/html/form_consulta.jsp</result>
-            <result name="error">/html/error.jsp</result>
         </action>
         <action name="mostrarArchivo" class="com.devicho.portal.serverfilemanager.actions.MostrarArchivoAction">
             <result name="success">/html/leer-archivo.jsp</result>
-            <result name="error">/html/error.jsp</result>
         </action>
         <action name="subirArchivoForm" class="com.devicho.portal.serverfilemanager.actions.SubirArchivoFormAction">
             <result name="success">/html/form_subida.jsp</result>
-            <result name="error">/html/error.jsp</result>
         </action>
         <action name="subirArchivo" class="com.devicho.portal.serverfilemanager.actions.SubirArchivoAction">
-            <result name="success">/html/form_subida.jsp</result>
-            <result name="error">/html/error.jsp</result>
+            <result name="success, input">/html/form_subida.jsp</result>
+        </action>
+        <action name="borrar" class="com.devicho.portal.serverfilemanager.actions.BorrarArchivosAction">
+            <result name="success" type="chain">index</result>
+            <result name="input">/html/form_consulta.jsp</result>
         </action>
     </package>
 </struts>
